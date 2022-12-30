@@ -33,6 +33,7 @@ daftar  db 13,10,'                                                              
         db 13,10,'=========================================================================','$'
 
 
+error1      db 13,10,'PERINTAH YANG ANDA MASUKAN TIDAK SESUAI $'
 error       db 13,10,'JENIS KENDARAAN YANG ANDA MASUKAN TIDAK SESUAI $'
 pilih       db 13,10,'Masukkan Jenis Kendaraan Anda = $'
 success     db 13,10,'Anda Berhasil Mencetak Tiket parkir $'
@@ -64,7 +65,13 @@ mulai:
         int 21h
         cmp al,'y'
         je proses
-        jne error_msg
+        jne error1_msg
+        
+error1_msg:
+    mov ah,09h
+    mov dx,offset error1
+    int 21h
+    int 20h
 
 error_msg:
     mov ah,09h
