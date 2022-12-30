@@ -33,7 +33,7 @@ daftar  db 13,10,'                                                              
         db 13,10,'=========================================================================','$'
 
 
-error       db 13,10,'JENIS KENDARAAN YANG ANDA MASUKA TIDAK SESUAI $'
+error       db 13,10,'JENIS KENDARAAN YANG ANDA MASUKAN TIDAK SESUAI $'
 pilih       db 13,10,'Masukkan Jenis Kendaraan Anda = $'
 success     db 13,10,'Anda Berhasil Mencetak Tiket parkir $'
 
